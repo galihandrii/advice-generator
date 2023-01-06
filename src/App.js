@@ -1,23 +1,36 @@
 import logo from './logo.svg';
 import './App.css';
+import axios from 'axios';
+import { useEffect, useState } from 'react';
+import Advicecard from './components/Advicecard';
 
 function App() {
+const [advice,setAdvice] = useState({
+  id:"",
+  slip:"Click dice below to get advice"
+})
+
+const getAdvice = () => {
+  
+    axios.get("https://api.adviceslip.com/advice")
+    .then((res)=>{
+      setAdvice({
+        id: res.data.slip.id,
+        slip:res.data.slip.advice
+      })
+    })
+    .catch((err)=> console.log(err));
+  
+
+}
+
+
+
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Advicecard onClick={getAdvice} id={advice.id} slip={advice.slip}/>
     </div>
   );
 }
