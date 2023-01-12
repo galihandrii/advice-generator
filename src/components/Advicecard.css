@@ -1,8 +1,47 @@
 .card{
-    width: 400px;
-    height: 320px;
-    border: 1px red dashed;
+    padding: 20px;
+    background-color:hsl(217, 19%, 24%);
+    border-radius: 16px;
+    width: 450px;
+    height: 274px;
+    border: 2px black;
     margin:auto;
     margin-top: 250px;
     text-align: center;
+}
+.card-top{
+    height: 200px;
+}
+.card-mid{
+    
+}
+.card-top img{
+    margin-top: 100px;
+}
+.card-top h3{
+    color:hsl(150, 100%, 66%);
+}
+.card-top h2{
+
+font-size: 20px;
+color:hsl(193, 38%, 86%);
+}
+
+.card-bottom{
+    padding-top: 20px;
+}
+.card-bottom button{
+background-color: hsl(150, 100%, 66%);
+width: 60px;
+height: 60px;
+border-radius: 50%;
+}
+.card-bottom button:hover{
+width: 65px;
+height: 65px;
+border-radius: 50%;
+box-shadow: 1px 1px 2px 2px  hsl(150, 100%, 66%);
+}
+.card-bottom img{
+    margin-top: 6px;
 }

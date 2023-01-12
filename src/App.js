@@ -30,7 +30,7 @@ const getAdvice = () => {
 
   return (
     <div>
-      <Advicecard onClick={getAdvice} id={advice.id} slip={advice.slip}/>
+      <Advicecard onClick={getAdvice} id={advice.id} advice={advice.slip}/>
     </div>
   );
 }
